@@ -1,0 +1,30 @@
+body {
+  background-color: #212529 !important;
+}
+
+.header-link {
+  text-decoration: none !important;
+  color: #212529;
+}
+
+.nav-item {
+  font-size: medium;
+  font-weight: bolder !important;
+}
+
+.btn {
+  color: #f8f9fa;
+}
+
+.link {
+  text-decoration: none !important;
+  color: #212529;
+}
+
+.skill-svg {
+  width: 3rem;
+}
+
+.skill-svg-big {
+  width: 4rem;
+}
