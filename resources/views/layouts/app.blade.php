@@ -36,10 +36,9 @@
                     <!-- Navi -->
                     <div class="d-flex justify-content-end">
                         <ul class="navbar-nav mb-2 mb-lg-0">
-                            <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Works</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#">About me</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Blog</a></li>
+                            <li class="nav-item"> <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('works') }}">Works</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
                             @auth
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
