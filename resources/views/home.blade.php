@@ -106,7 +106,7 @@
                             <br><br>
                             Wanna get me excited??
                             <br>
-                            Just give me a problem that need thinking and you would get me working on it <strong>immediately</strong> (believe me when I say I won't sleep until I <strong>solve it</strong> or <strong>pass out</strong> trying to XD).
+                            Just give me a problem that need thinking and you would get me working on it <strong>immediately</strong> (believe me when I say I won't sleep until I <strong>solve it</strong> or <strong>pass out</strong> trying to).
                             <br><br>
                             I made several projects mostly to <strong>Challenge</strong> my self or sometimes just for <strong>Fun</strong> and good time.
                             <br><br>

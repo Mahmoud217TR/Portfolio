@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/works', [App\Http\Controllers\WorksController::class, 'index'])->name('works');
+Route::get('/projects', [App\Http\Controllers\ProjectsController::class, 'index'])->name('projects');
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
