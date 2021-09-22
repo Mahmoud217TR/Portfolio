@@ -7,6 +7,10 @@ body {
   color: #212529;
 }
 
+.header-link:hover {
+  color: #F9A826 !important;
+}
+
 .nav-item {
   font-size: medium;
   font-weight: bolder !important;
@@ -21,10 +25,63 @@ body {
   color: #212529;
 }
 
+.link:hover {
+  color: #F9A826;
+}
+
 .skill-svg {
   width: 3rem;
 }
 
 .skill-svg-big {
   width: 4rem;
+}
+
+.bottom-container {
+  -webkit-clip-path: polygon(0 0, 51% 0, 43% 31%, 83% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 51% 0, 43% 31%, 83% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.full-page {
+  min-height: 100vh;
+}
+
+.font-lobster {
+  font-family: "Lobster", cursive;
+}
+
+.expand-row {
+  height: 30vh;
+}
+
+.long-btn {
+  width: 20rem;
+}
+
+.footer-link {
+  color: #212529 !important;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #F9A826 !important;
+}
+
+.bg-gold {
+  background-color: #F9A826 !important;
+  color: #f8f9fa !important;
+}
+
+.text-gold {
+  color: #F9A826 !important;
+}
+
+.btn-gold {
+  background-color: #F9A826 !important;
+  color: #f8f9fa !important;
+  border-color: #F9A826 !important;
+}
+
+.btn-gold:focus {
+  box-shadow: 0 0 0 0.25rem rgba(249, 168, 38, 0.25) !important;
 }

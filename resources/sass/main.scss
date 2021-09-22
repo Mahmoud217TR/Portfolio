@@ -1,14 +1,19 @@
 $my-white: #f8f9fa;
 $my-dark: #212529;
 $my-yellow: #ffed4a;
+$my-gold: #F9A826;
 $my-red: #e3342f;
 
 body{
-    background-color: #212529!important;
+    background-color: $my-dark!important;
 }
 .header-link{
     text-decoration: none!important;
     color: $my-dark;
+}
+
+.header-link:hover{
+    color: $my-gold !important;;
 }
 
 .nav-item{
@@ -24,6 +29,9 @@ body{
     text-decoration: none!important;
     color: $my-dark;
 }
+.link:hover{
+    color:$my-gold;
+}
 
 .skill-svg{
     width: 3rem;
@@ -31,4 +39,52 @@ body{
 
 .skill-svg-big{
     width: 4rem;
+}
+
+.bottom-container{
+    clip-path: polygon(0 0, 51% 0, 43% 31%, 83% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.full-page{
+    min-height: 100vh;
+}
+
+.font-lobster{
+    font-family: 'Lobster', cursive;
+}
+
+.expand-row{
+    height: 30vh;
+}
+
+.long-btn{
+    width: 20rem;
+}
+
+.footer-link{
+    color: $my-dark!important;
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    color: $my-gold !important;;
+}
+
+.bg-gold{
+    background-color: $my-gold!important;
+    color: $my-white!important;
+}
+
+.text-gold{
+    color: $my-gold!important;
+}
+
+.btn-gold{
+    background-color: $my-gold!important;
+    color: $my-white!important;
+    border-color: $my-gold!important;
+}
+
+.btn-gold:focus{
+    box-shadow: 0 0 0 0.25rem rgb(249 168 38/25%)!important;
 }
