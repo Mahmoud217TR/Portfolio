@@ -6,7 +6,7 @@
     <div class="row justify-content-center bg-light rounded">
         <div class="col-lg-3 px-1 py-1">
             <div class="card bg-light">
-                <img src="{{ secure_asset('images/Formal.jpg') }}" class="card-img-top" alt="my picture">
+                <img src="{{ asset('images/Formal.jpg') }}" class="card-img-top" alt="my picture">
                 <div class="card-body">
                   <h5 class="card-title text-center h3">Mahmoud Mahmoud</h5>
                   <p class="card-text container">
