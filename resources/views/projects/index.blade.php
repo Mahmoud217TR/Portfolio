@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="col-lg-8 py-4">
-            <img src="{{ asset('svg/states.svg') }}" alt="" class="img-fluid">
+            <img src="{{ secure_asset('svg/states.svg') }}" alt="" class="img-fluid">
         </div>
     </div>
 </div>
