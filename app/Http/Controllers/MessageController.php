@@ -16,6 +16,7 @@ class MessageController extends Controller
             'message' => ['required', 'string', 'max:500'],
         ]);
 
+        Message::create($data);
         return redirect(route('message.thanks'));
     }
 
