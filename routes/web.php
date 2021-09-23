@@ -19,4 +19,4 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/projects', [App\Http\Controllers\ProjectsController::class, 'index'])->name('projects');
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
-Route::get('/contacts', [App\Http\Controllers\BlogController::class, 'index'])->name('contacts');
+Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'index'])->name('contacts');

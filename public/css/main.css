@@ -5,6 +5,7 @@ body {
 .header-link {
   text-decoration: none !important;
   color: #212529;
+  transition: 0.3s linear;
 }
 
 .header-link:hover {
@@ -23,9 +24,20 @@ body {
 .link {
   text-decoration: none !important;
   color: #212529;
+  transition: 0.3s linear;
 }
 
 .link:hover {
+  color: #F9A826;
+}
+
+.light-link {
+  text-decoration: none !important;
+  color: #f8f9fa;
+  transition: 0.3s linear;
+}
+
+.light-link:hover {
   color: #F9A826;
 }
 
@@ -61,6 +73,7 @@ body {
 .footer-link {
   color: #212529 !important;
   text-decoration: none;
+  transition: 0.3s linear;
 }
 
 .footer-link:hover {
@@ -82,6 +95,14 @@ body {
   border-color: #F9A826 !important;
 }
 
+.btn-gold:hover {
+  background-color: #EA960F !important;
+}
+
 .btn-gold:focus {
-  box-shadow: 0 0 0 0.25rem rgba(249, 168, 38, 0.25) !important;
+  box-shadow: 0 0 0 0.25rem rgba(234, 150, 15, 0.25) !important;
+}
+
+.void {
+  min-height: 20vh;
 }

@@ -136,40 +136,40 @@
         <div class="col-lg-10 bg-light py-2">
             <div class="row py-4">
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center" tool>
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/html.svg') }}" alt="HTML" title="HTML">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/html.svg') }}" alt="HTML" title="HTML">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/css.svg') }}" alt="CSS" title="CSS">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/css.svg') }}" alt="CSS" title="CSS">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/javascript.svg') }}" alt="JavaScript" title="JavaScript">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/javascript.svg') }}" alt="JavaScript" title="JavaScript">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/laravel.svg') }}" alt="Laravel" title="Laravel">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/laravel.svg') }}" alt="Laravel" title="Laravel">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/vue-js.svg') }}" alt="Vue js" title="Vue js">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/vue-js.svg') }}" alt="Vue js" title="Vue js">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/python.svg') }}" alt="Python" title="Python">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/python.svg') }}" alt="Python" title="Python">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/github.svg') }}" alt="Github" title="Github">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/github.svg') }}" alt="Github" title="Github">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg-big' src="{{ secure_asset('svg/sqlite.svg') }}" alt="Sqlite" title="Sqlite">
+                    <img class='img-fluid skill-svg-big' src="{{ asset('svg/sqlite.svg') }}" alt="Sqlite" title="Sqlite">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg-big' src="{{ secure_asset('svg/mysql.svg') }}" alt="mySql" title="mySql">
+                    <img class='img-fluid skill-svg-big' src="{{ asset('svg/mysql.svg') }}" alt="mySql" title="mySql">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/nodejs.svg') }}" alt="Node js" title="Node js">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/nodejs.svg') }}" alt="Node js" title="Node js">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/Cs.svg') }}" alt="C#" title="C#">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/Cs.svg') }}" alt="C#" title="C#">
                 </div>
                 <div class="col-sm-1 py-sm-0 py-3 d-flex justify-content-center align-items-center">
-                    <img class='img-fluid skill-svg' src="{{ secure_asset('svg/java.svg') }}" alt="C++" title="C++">
+                    <img class='img-fluid skill-svg' src="{{ asset('svg/java.svg') }}" alt="C++" title="C++">
                 </div>
             </div>
         </div>

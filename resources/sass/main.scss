@@ -2,6 +2,7 @@ $my-white: #f8f9fa;
 $my-dark: #212529;
 $my-yellow: #ffed4a;
 $my-gold: #F9A826;
+$my-darker-gold: #EA960F;
 $my-red: #e3342f;
 
 body{
@@ -10,6 +11,7 @@ body{
 .header-link{
     text-decoration: none!important;
     color: $my-dark;
+    transition: .3s linear;
 }
 
 .header-link:hover{
@@ -28,8 +30,20 @@ body{
 .link{
     text-decoration: none!important;
     color: $my-dark;
+    transition: .3s linear;
 }
+
 .link:hover{
+    color:$my-gold;
+}
+
+.light-link{
+    text-decoration: none!important;
+    color: $my-white;
+    transition: .3s linear;
+}
+
+.light-link:hover{
     color:$my-gold;
 }
 
@@ -64,6 +78,7 @@ body{
 .footer-link{
     color: $my-dark!important;
     text-decoration: none;
+    transition: .3s linear;
 }
 
 .footer-link:hover{
@@ -85,6 +100,14 @@ body{
     border-color: $my-gold!important;
 }
 
+.btn-gold:hover{
+    background-color: $my-darker-gold!important;
+}
+
 .btn-gold:focus{
-    box-shadow: 0 0 0 0.25rem rgb(249 168 38/25%)!important;
+    box-shadow: 0 0 0 0.25rem rgb(234 150 15/25%)!important;
+}
+
+.void{
+    min-height: 20vh;
 }
