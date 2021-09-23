@@ -21,3 +21,4 @@ Route::get('/projects', [App\Http\Controllers\ProjectsController::class, 'index'
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'index'])->name('contacts');
 Route::Post('/message', [App\Http\Controllers\MessageController::class, 'create'])->name('message.create');
+Route::get('/thanks', [App\Http\Controllers\MessageController::class, 'thanks'])->name('message.thanks');

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Message;
-
+use Illuminate\Support\Facades\Redirect;
 
 class MessageController extends Controller
 {
@@ -16,6 +16,10 @@ class MessageController extends Controller
             'message' => ['required', 'string', 'max:500'],
         ]);
 
-        dd(Message::create($data));
+        return redirect(route('message.thanks'));
+    }
+
+    public function thanks(){
+        return view('contacts.thanks');
     }
 }
