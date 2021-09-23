@@ -5415,45 +5415,90 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
   },
+  props: ['formAction', 'contactText'],
   data: function data() {
     return {
       email: 'mahmoudtr17@gmail.com',
       phone: '+963938318491',
       tele: '@MahmoudTR',
-      show: false
+      show: false,
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
     };
   },
   methods: {
     toggleShow: function toggleShow() {
-      this.show = !this.show;
-    },
-    copyEmail: function copyEmail() {
       var _this = this;
 
-      this.$refs.emailRow.classList.add('golden-color');
+      this.show = true;
+      this.$refs.toast.classList.add('shown');
+      this.$refs.toast.classList.remove('hidden');
       setTimeout(function () {
-        _this.$refs.emailRow.classList.remove('golden-color');
-      }, 300);
+        _this.$refs.toast.classList.remove('shown');
+
+        _this.$refs.toast.classList.add('hidden');
+      }, 500);
+      setTimeout(function () {
+        _this.show = false;
+      }, 1000);
     },
-    copyPhone: function copyPhone() {
+    copyEmail: function copyEmail() {
       var _this2 = this;
 
-      this.$refs.phoneRow.classList.add('golden-color');
+      this.$refs.emailRow.classList.add('golden-color');
+      this.toggleShow();
       setTimeout(function () {
-        _this2.$refs.phoneRow.classList.remove('golden-color');
-      }, 300);
+        _this2.$refs.emailRow.classList.remove('golden-color');
+      }, 500);
+      navigator.clipboard.writeText(this.email);
     },
-    copyTele: function copyTele() {
+    copyPhone: function copyPhone() {
       var _this3 = this;
 
-      this.$refs.teleRow.classList.add('golden-color');
+      this.$refs.phoneRow.classList.add('golden-color');
+      this.toggleShow();
       setTimeout(function () {
-        _this3.$refs.teleRow.classList.remove('golden-color');
-      }, 300);
+        _this3.$refs.phoneRow.classList.remove('golden-color');
+      }, 500);
+      navigator.clipboard.writeText(this.phone);
+    },
+    copyTele: function copyTele() {
+      var _this4 = this;
+
+      this.$refs.teleRow.classList.add('golden-color');
+      this.toggleShow();
+      setTimeout(function () {
+        _this4.$refs.teleRow.classList.remove('golden-color');
+      }, 500);
+      navigator.clipboard.writeText(this.tele);
     }
   }
 });
@@ -10621,7 +10666,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.contact-container[data-v-3251520f]{\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n}\n.contact-info[data-v-3251520f]{\n        background-color: #f8f9fa;\n        min-height: 30rem;\n        width:40%;\n        border-radius: 0.5rem 0 0 0.5rem;\n}\n.contact-form[data-v-3251520f]{\n        background-color: #212529;\n        min-height: 30rem;\n        width:40%;\n        z-index: 1000;\n        position: relative;\n        border-radius: 0 0.5rem 0.5rem 0;\n}\n.contact-form[data-v-3251520f]::before{\n        content: \"\";\n        background-color: #212529;\n        height: 1.5rem;\n        width: 1.5rem;\n        position: absolute;\n        top:10%;\n        left:-.75rem;\n        transform: rotate(45deg);\n}\n.form-control[data-v-3251520f]:focus{\n        box-shadow: 0 0 0 0.25rem rgb(250 250 250/25%)!important;\n}\n.form-label[data-v-3251520f]{\n        font-size: 1.5rem;\n}\n#message[data-v-3251520f]{\n        height: 10rem;\n        resize: none;\n}\n.contact-text[data-v-3251520f]{\n        min-height: 7rem;\n}\n.color-changer[data-v-3251520f]{\n        transition: .1s linear;\n        cursor: pointer;\n}\n.golden-color[data-v-3251520f]{\n        color: #F9A826!important;\n}\n@media only screen and (max-width: 992px) {\n.contact-container[data-v-3251520f]{\n        display: block;\n}\n.contact-info[data-v-3251520f]{\n        margin: 0 auto;\n        background-color: #f8f9fa;\n        min-height: 20rem;\n        width:80%;\n        border-radius: 0.5rem 0.5rem 0 0;\n}\n.contact-form[data-v-3251520f]{\n        margin: 0 auto;\n        background-color: #212529;\n        min-height: 20rem;\n        width:80%;\n        z-index: 1000;\n        position: relative;\n        border-radius: 0 0 0.5rem 0.5rem;\n}\n.contact-form[data-v-3251520f]::before {\n        position: absolute;\n        left:10%;\n        top:-.75rem;\n}\n}\n    \n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.contact-container[data-v-3251520f]{\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n}\nspan[data-v-3251520f]{\n        overflow-x: auto;\n        overflow-y: hidden;\n}\n.contact-info[data-v-3251520f]{\n        background-color: #f8f9fa;\n        min-height: 30rem;\n        width:40%;\n        border-radius: 0.5rem 0 0 0.5rem;\n}\n.contact-form[data-v-3251520f]{\n        background-color: #212529;\n        min-height: 30rem;\n        width:40%;\n        z-index: 1000;\n        position: relative;\n        border-radius: 0 0.5rem 0.5rem 0;\n}\n.contact-form[data-v-3251520f]::before{\n        content: \"\";\n        background-color: #212529;\n        height: 1.5rem;\n        width: 1.5rem;\n        position: absolute;\n        top:10%;\n        left:-.75rem;\n        transform: rotate(45deg);\n}\n.form-control[data-v-3251520f]:focus{\n        box-shadow: 0 0 0 0.25rem rgb(250 250 250/25%)!important;\n}\n.form-label[data-v-3251520f]{\n        font-size: 1.5rem;\n}\n#message[data-v-3251520f]{\n        height: 10rem;\n        resize: none;\n}\n.contact-text[data-v-3251520f]{\n        min-height: 7rem;\n}\n.color-changer[data-v-3251520f]{\n        transition: .3s linear;\n        cursor: pointer;\n}\n.golden-color[data-v-3251520f]{\n        color: #F9A826!important;\n}\n.shown[data-v-3251520f]{\n        opacity: 1;\n        transition: .1s linear;\n}\n.hidden[data-v-3251520f]{\n        opacity: 0;\n        transition: .5s linear;\n}\n@media only screen and (max-width: 992px) {\n.contact-container[data-v-3251520f]{\n        display: block;\n}\n.contact-info[data-v-3251520f]{\n        margin: 0 auto;\n        background-color: #f8f9fa;\n        min-height: 20rem;\n        width:80%;\n        border-radius: 0.5rem 0.5rem 0 0;\n}\n.contact-form[data-v-3251520f]{\n        margin: 0 auto;\n        background-color: #212529;\n        min-height: 20rem;\n        width:80%;\n        z-index: 1000;\n        position: relative;\n        border-radius: 0 0 0.5rem 0.5rem;\n}\n.contact-form[data-v-3251520f]::before {\n        position: absolute;\n        left:10%;\n        top:-.75rem;\n}\n}\n    \n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42154,94 +42199,30 @@ var render = function() {
               _c("div", { staticClass: "container" }, [
                 _vm._m(0),
                 _vm._v(" "),
-                _vm._m(1),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("p", { staticClass: "text-muted contact-text" }, [
+                      _vm._v(
+                        "\n                                    " +
+                          _vm._s(_vm.contactText) +
+                          "\n                                "
+                      )
+                    ])
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { ref: "emailRow", staticClass: "row py-2" }, [
-                  _c("div", { staticClass: "col-2 text-end" }, [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "color-changer bi bi-envelope-fill",
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          width: "23",
-                          height: "23",
-                          fill: "currentColor",
-                          viewBox: "0 0 16 16"
-                        },
-                        on: { click: _vm.copyEmail }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            d:
-                              "M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
-                          }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-10 d-flex align-items-end" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass: "mb-0 h5 color-changer",
-                        on: { click: _vm.copyEmail }
-                      },
-                      [_vm._v(_vm._s(_vm.email))]
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { ref: "phoneRow", staticClass: "row py-2" }, [
-                  _c("div", { staticClass: "col-2 text-end" }, [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "color-changer bi bi-telephone-fill",
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          width: "23",
-                          height: "23",
-                          fill: "currentColor",
-                          viewBox: "0 0 16 16"
-                        },
-                        on: { click: _vm.copyPhone }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            "fill-rule": "evenodd",
-                            d:
-                              "M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                          }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-10 d-flex align-items-end" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass: "mb-0 h5 color-changer",
-                        on: { click: _vm.copyPhone }
-                      },
-                      [_vm._v(_vm._s(_vm.phone))]
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { ref: "teleRow", staticClass: "row py-2 color-changer" },
-                  [
-                    _c("div", { staticClass: "col-2 text-end" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-md-2 text-md-end text-start py-2 py-md-0"
+                    },
+                    [
                       _c(
                         "svg",
                         {
-                          staticClass: "color-changer bi bi-telegram",
+                          staticClass: "color-changer bi bi-envelope-fill",
                           attrs: {
                             xmlns: "http://www.w3.org/2000/svg",
                             width: "23",
@@ -42249,22 +42230,125 @@ var render = function() {
                             fill: "currentColor",
                             viewBox: "0 0 16 16"
                           },
-                          on: { click: _vm.copyTele }
+                          on: { click: _vm.copyEmail }
                         },
                         [
                           _c("path", {
                             attrs: {
                               d:
-                                "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                                "M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
                             }
                           })
                         ]
                       )
-                    ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-10 d-flex align-items-end" },
+                    [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mb-0 h5 color-changer",
+                          on: { click: _vm.copyEmail }
+                        },
+                        [_vm._v(_vm._s(_vm.email))]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { ref: "phoneRow", staticClass: "row py-2" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-md-2 text-md-end text-start py-2 py-md-0"
+                    },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "color-changer bi bi-telephone-fill",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            width: "23",
+                            height: "23",
+                            fill: "currentColor",
+                            viewBox: "0 0 16 16"
+                          },
+                          on: { click: _vm.copyPhone }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "fill-rule": "evenodd",
+                              d:
+                                "M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-10 d-flex align-items-end" },
+                    [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mb-0 h5 color-changer",
+                          on: { click: _vm.copyPhone }
+                        },
+                        [_vm._v(_vm._s(_vm.phone))]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { ref: "teleRow", staticClass: "row py-2 color-changer" },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-2 text-md-end text-start py-2 py-md-0"
+                      },
+                      [
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "color-changer bi bi-telegram",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              width: "23",
+                              height: "23",
+                              fill: "currentColor",
+                              viewBox: "0 0 16 16"
+                            },
+                            on: { click: _vm.copyTele }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                d:
+                                  "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "col-10 d-flex align-items-end" },
+                      { staticClass: "col-md-10 d-flex align-items-end" },
                       [
                         _c(
                           "span",
@@ -42277,11 +42361,60 @@ var render = function() {
                       ]
                     )
                   ]
-                )
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "row py-5" }, [
+                  _c("div", { staticClass: "col-md-4 offset-md-4" }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.show,
+                            expression: "show"
+                          }
+                        ],
+                        ref: "toast",
+                        staticClass:
+                          "rounded bg-secondary text-light text-center py-1"
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Copied!\n                                "
+                        )
+                      ]
+                    )
+                  ])
+                ])
               ])
             ]),
             _vm._v(" "),
-            _vm._m(2)
+            _c("div", { staticClass: "contact-form border border-light" }, [
+              _c("div", { staticClass: "container-fluid" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  { attrs: { action: _vm.formAction, method: "post" } },
+                  [
+                    _c("input", {
+                      attrs: { type: "hidden", name: "_token" },
+                      domProps: { value: _vm.csrf }
+                    }),
+                    _vm._v(" "),
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _vm._m(5)
+                  ]
+                )
+              ])
+            ])
           ])
         ]
       )
@@ -42307,11 +42440,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("p", { staticClass: "text-muted contact-text" }, [
+    return _c("div", { staticClass: "row py-4" }, [
+      _c("div", { staticClass: "col text-center text-light" }, [
+        _c("span", { staticClass: "h2" }, [
           _vm._v(
-            "\n                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repudiandae labore architecto similique voluptatibus amet esse molestiae tempore temporibus omnis nesciunt vel asperiores sequi consequuntur dicta quia, distinctio maiores porro nihil quis illum veritatis commodi. Perferendis sed architecto sit soluta?\n                                "
+            "\n                                    Send Me a Message\n                                "
           )
         ])
       ])
@@ -42321,108 +42454,85 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "contact-form border border-light" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "row py-4" }, [
-          _c("div", { staticClass: "col text-center text-light" }, [
-            _c("span", { staticClass: "h2" }, [
-              _vm._v(
-                "\n                                    Send Me a Message\n                                "
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("form", { attrs: { action: "#" } }, [
-          _c("div", { staticClass: "row py-2" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-4 text-lg-end text-start text-light" },
-              [
-                _c(
-                  "label",
-                  { staticClass: "form-label", attrs: { for: "name" } },
-                  [
-                    _vm._v(
-                      "\n                                        Name:\n                                    "
-                    )
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-8" }, [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", id: "name", name: "name" }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row py-2" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-4 text-lg-end text-start text-light" },
-              [
-                _c(
-                  "label",
-                  { staticClass: "form-label", attrs: { for: "email" } },
-                  [
-                    _vm._v(
-                      "\n                                        Your Email:\n                                    "
-                    )
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-8" }, [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "email", id: "email", name: "email" }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row py-2" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-4 text-lg-end text-start text-light" },
-              [
-                _c(
-                  "label",
-                  { staticClass: "form-label", attrs: { for: "message" } },
-                  [
-                    _vm._v(
-                      "\n                                        Message:\n                                    "
-                    )
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-8" }, [
-              _c("textarea", {
-                staticClass: "form-control",
-                attrs: { type: "message", id: "message", name: "message" }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row py-2" }, [
-            _c("div", { staticClass: "col-lg-8 offset-lg-4" }, [
-              _c(
-                "button",
-                { staticClass: "btn btn-gold", attrs: { type: "submit" } },
-                [
-                  _vm._v(
-                    "\n                                        Send\n                                    "
-                  )
-                ]
-              )
-            ])
-          ])
+    return _c("div", { staticClass: "row py-2" }, [
+      _c("div", { staticClass: "col-lg-4 text-lg-end text-start text-light" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "name" } }, [
+          _vm._v(
+            "\n                                        Name:\n                                    "
+          )
         ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-8" }, [
+        _c("input", {
+          staticClass: "form-control",
+          attrs: { type: "text", id: "name", name: "name", required: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row py-2" }, [
+      _c("div", { staticClass: "col-lg-4 text-lg-end text-start text-light" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "email" } }, [
+          _vm._v(
+            "\n                                        Your Email:\n                                    "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-8" }, [
+        _c("input", {
+          staticClass: "form-control",
+          attrs: { type: "email", id: "email", name: "email", required: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row py-2" }, [
+      _c("div", { staticClass: "col-lg-4 text-lg-end text-start text-light" }, [
+        _c("label", { staticClass: "form-label", attrs: { for: "message" } }, [
+          _vm._v(
+            "\n                                        Message:\n                                    "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-8" }, [
+        _c("textarea", {
+          staticClass: "form-control",
+          attrs: {
+            type: "message",
+            id: "message",
+            name: "message",
+            required: ""
+          }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row py-2" }, [
+      _c("div", { staticClass: "col-lg-8 offset-lg-4" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-gold", attrs: { type: "submit" } },
+          [
+            _vm._v(
+              "\n                                        Send\n                                    "
+            )
+          ]
+        )
       ])
     ])
   }
