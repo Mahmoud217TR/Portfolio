@@ -63,7 +63,7 @@ body {
 }
 
 .expand-row {
-  height: 30vh;
+  height: 30%;
 }
 
 .long-btn {
@@ -105,4 +105,9 @@ body {
 
 .void {
   min-height: 20vh;
+}
+
+.page-img {
+  margin: 0 auto;
+  width: 15rem;
 }

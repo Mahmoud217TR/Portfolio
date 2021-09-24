@@ -229,9 +229,6 @@
 </style>
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        },
         props:['formAction','contactText'],
         data() {
             return {

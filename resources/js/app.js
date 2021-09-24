@@ -21,6 +21,7 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('contact-component', require('./components/ContactsComponent').default);
+Vue.component('project-component', require('./components/ProjectShowerComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

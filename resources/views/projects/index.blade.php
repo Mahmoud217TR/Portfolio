@@ -23,5 +23,12 @@
     </div>
 </div>
 
+<div class="void"></div>
+
+<project-component pj-default="{{ asset('svg/project.svg') }}" left='true' project='{"id":1,"title":"Project Name","description":"........","thumb":null,"link":"#"}'></project-component>
+
+<div class="void"></div>
+
+<project-component pj-default="{{ asset('svg/project.svg') }}"  project='{"id":1,"title":"Project Name","description":"........","thumb":null,"link":"#"}'></project-component>
 
 @endsection

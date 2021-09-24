@@ -79,11 +79,10 @@
                 <div class="row py-4 expand-row">
                     <div class="col-md-6 py-2">
                         <div class="d-flex justify-content-md-end justify-content-center">
-                            <a href="{{ route('contacts') }}">
-                                <button class="btn btn-dark long-btn">
-                                    <strong>Contanct Me</strong>
-                                </button>
-                            </a>
+                            <button class="btn btn-dark long-btn" onclick="document.getElementById('contact-me-link').click();">
+                                <a id='contact-me-link' class="link" href="{{ route('contacts') }}"></a>
+                                <strong>Contanct Me</strong>
+                            </button>
                         </div>
                     </div>
                     <div class="col-md-6 py-2">
